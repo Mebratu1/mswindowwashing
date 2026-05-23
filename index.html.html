@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ms Window Washing LLC | AI-Powered Cleaning & Janitorial Services – DMV Region</title>
+<meta name="description" content="The DMV region's premier window washing and commercial cleaning company. Expert human crews, AI-powered scheduling and quotes, enterprise-grade service in DC, Maryland & Virginia.">
+<meta name="keywords" content="window washing DC, commercial cleaning Maryland, janitorial services Virginia, DMV cleaning company, professional window washers">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sky: #0a0e1a;
+    --sky2: #0d1526;
+    --sky3: #111e35;
+    --glass: rgba(255,255,255,0.04);
+    --glass2: rgba(255,255,255,0.08);
+    --glass3: rgba(255,255,255,0.12);
+    --border: rgba(255,255,255,0.1);
+    --border2: rgba(255,255,255,0.18);
+    --accent: #4fc3f7;
+    --accent2: #81d4fa;
+    --gold: #f5c842;
+    --gold2: #ffd966;
+    --green: #4caf88;
+    --text: #e8edf5;
+    --text2: #a8b8cc;
+    --text3: #6a7d94;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+    --font-mono: 'DM Mono', monospace;
+    --radius: 16px;
+    --radius-sm: 10px;
+    --shadow: 0 32px 80px rgba(0,0,0,0.5);
+    --glow: 0 0 60px rgba(79,195,247,0.12);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body);
+    background: var(--sky);
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 18px 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(10,14,26,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none;
+  }
+  .logo-icon {
+    width: 38px; height: 38px;
+    background: linear-gradient(135deg, var(--accent), #1565c0);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+  .logo-text {
+    font-family: var(--font-display);
+    font-size: 22px; font-weight: 500;
+    color: var(--text);
+    letter-spacing: 0.02em;
+  }
+  .logo-text span { color: var(--accent); }
+  .nav-links {
+    display: flex; align-items: center; gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none; color: var(--text2);
+    font-size: 14px; font-weight: 400;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--text); }
+  .nav-cta {
+    background: linear-gradient(135deg, var(--accent), #1976d2);
+    color: #fff !important;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 500 !important;
+    transition: opacity 0.2s !important;
+  }
+  .nav-cta:hover { opacity: 0.85; }
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+    padding: 120px 5% 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 20%, rgba(79,195,247,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 80% 80%, rgba(21,101,192,0.1) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 30% at 20% 70%, rgba(245,200,66,0.04) 0%, transparent 60%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0; z-index: 0; opacity: 0.04;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--glass2);
+    border: 1px solid var(--border);
+    border-radius: 40px;
+    padding: 8px 18px;
+    font-size: 13px; color: var(--accent2);
+    font-family: var(--font-mono);
+    letter-spacing: 0.05em;
+    margin-bottom: 28px;
+    position: relative; z-index: 1;
+    animation: fadeUp 0.6s ease both;
+  }
+  .pulse-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(52px, 8vw, 110px);
+    font-weight: 300;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    position: relative; z-index: 1;
+    animation: fadeUp 0.7s ease 0.1s both;
+  }
+  .hero h1 em {
+    font-style: italic;
+    background: linear-gradient(135deg, var(--accent), var(--gold));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-sub {
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--text2);
+    max-width: 640px;
+    line-height: 1.7;
+    margin: 24px auto 0;
+    font-weight: 300;
+    position: relative; z-index: 1;
+    animation: fadeUp 0.7s ease 0.2s both;
+  }
+  .hero-actions {
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 44px;
+    position: relative; z-index: 1;
+    animation: fadeUp 0.7s ease 0.3s both;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #1565c0);
+    color: #fff;
+    padding: 16px 36px;
+    border-radius: 10px;
+    font-size: 16px; font-weight: 500;
+    border: none; cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 32px rgba(79,195,247,0.3);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(79,195,247,0.4); }
+  .btn-ghost {
+    background: var(--glass2);
+    border: 1px solid var(--border2);
+    color: var(--text);
+    padding: 16px 36px;
+    border-radius: 10px;
+    font-size: 16px; font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .btn-ghost:hover { background: var(--glass3); }
+  .hero-stats {
+    display: flex; gap: 48px; justify-content: center; flex-wrap: wrap;
+    margin-top: 70px;
+    position: relative; z-index: 1;
+    animation: fadeUp 0.7s ease 0.4s both;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+  }
+  .stat-item { text-align: center; }
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 42px; font-weight: 300;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .stat-label { font-size: 13px; color: var(--text3); margin-top: 4px; letter-spacing: 0.05em; text-transform: uppercase; }
+  /* SECTION BASICS */
+  section { padding: 100px 5%; }
+  .section-label {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 11px; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--accent);
+    background: rgba(79,195,247,0.08);
+    border: 1px solid rgba(79,195,247,0.2);
+    padding: 6px 14px; border-radius: 40px;
+    margin-bottom: 20px;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 5vw, 62px);
+    font-weight: 300; line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .section-title em {
+    font-style: italic;
+    background: linear-gradient(135deg, var(--accent), var(--gold));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .section-sub {
+    color: var(--text2); font-size: 18px; font-weight: 300;
+    max-width: 560px; line-height: 1.7; margin-top: 16px;
+  }
+  /* QUOTE ENGINE */
+  #quote { background: var(--sky2); }
+  .quote-wrap {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;
+    max-width: 1200px; margin: 60px auto 0;
+  }
+  .quote-panel {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 40px;
+    backdrop-filter: blur(10px);
+  }
+  .quote-panel h3 {
+    font-family: var(--font-display); font-size: 28px; font-weight: 400;
+    margin-bottom: 6px;
+  }
+  .quote-panel p { color: var(--text2); font-size: 15px; margin-bottom: 28px; }
+  .form-group { margin-bottom: 20px; }
+  .form-group label { display: block; font-size: 13px; color: var(--text2); margin-bottom: 8px; letter-spacing: 0.03em; }
+  .form-group select,
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    outline: none;
+    transition: border 0.2s;
+    appearance: none;
+  }
+  .form-group select:focus,
+  .form-group input:focus,
+  .form-group textarea:focus { border-color: var(--accent); }
+  .form-group select option { background: #1a2540; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .quote-result {
+    background: var(--glass2);
+    border: 1px solid rgba(79,195,247,0.25);
+    border-radius: var(--radius);
+    padding: 40px;
+    position: relative; overflow: hidden;
+  }
+  .quote-result::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+  }
+  .quote-ai-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(79,195,247,0.1);
+    border: 1px solid rgba(79,195,247,0.2);
+    border-radius: 40px; padding: 5px 12px;
+    font-size: 11px; color: var(--accent);
+    font-family: var(--font-mono); letter-spacing: 0.08em;
+    margin-bottom: 24px;
+  }
+  .quote-price {
+    font-family: var(--font-display);
+    font-size: 72px; font-weight: 300;
+    line-height: 1; color: var(--text);
+    margin-bottom: 8px;
+  }
+  .quote-price sub { font-size: 24px; vertical-align: middle; color: var(--accent); }
+  .quote-breakdown { margin-top: 28px; }
+  .quote-line {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+  }
+  .quote-line:last-child { border: none; }
+  .quote-line span:first-child { color: var(--text2); }
+  .quote-line span:last-child { font-weight: 500; }
+  .quote-line.total span { color: var(--text); font-size: 16px; }
+  .quote-actions { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-book {
+    flex: 1;
+    background: linear-gradient(135deg, var(--accent), #1565c0);
+    color: #fff; border: none;
+    padding: 14px 24px; border-radius: 8px;
+    font-size: 15px; font-weight: 500;
+    cursor: pointer; transition: opacity 0.2s;
+  }
+  .btn-book:hover { opacity: 0.85; }
+  .btn-save {
+    flex: 1;
+    background: transparent;
+    border: 1px solid var(--border2); color: var(--text);
+    padding: 14px 24px; border-radius: 8px;
+    font-size: 15px; cursor: pointer; transition: background 0.2s;
+  }
+  .btn-save:hover { background: var(--glass2); }
+  /* SERVICES */
+  #services { background: var(--sky); }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    max-width: 1200px; margin: 60px auto 0;
+  }
+  .service-card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px 32px;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    cursor: pointer; position: relative; overflow: hidden;
+  }
+  .service-card::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .service-card:hover { transform: translateY(-4px); border-color: rgba(79,195,247,0.3); box-shadow: 0 24px 60px rgba(0,0,0,0.3); }
+  .service-card:hover::after { opacity: 1; }
+  .service-icon {
+    width: 52px; height: 52px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; margin-bottom: 20px;
+  }
+  .icon-blue { background: rgba(79,195,247,0.12); }
+  .icon-gold { background: rgba(245,200,66,0.12); }
+  .icon-green { background: rgba(76,175,136,0.12); }
+  .service-card h3 {
+    font-family: var(--font-display); font-size: 24px; font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .service-card p { color: var(--text2); font-size: 15px; line-height: 1.6; font-weight: 300; }
+  .service-features { margin-top: 20px; list-style: none; }
+  .service-features li {
+    font-size: 13px; color: var(--text2);
+    padding: 6px 0; border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .service-features li::before { content: '✓'; color: var(--accent); font-weight: 600; }
+  .service-tag {
+    display: inline-block; margin-top: 20px;
+    font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent); font-family: var(--font-mono);
+  }
+  /* CHATBOT */
+  #ai-chat { background: var(--sky2); }
+  .chat-wrap {
+    display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center;
+    max-width: 1200px; margin: 60px auto 0;
+  }
+  .chat-window {
+    background: var(--sky3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow), var(--glow);
+  }
+  .chat-header {
+    background: var(--glass2);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 20px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .chat-avatar {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #1565c0);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+  .chat-title { font-weight: 500; font-size: 15px; }
+  .chat-status { font-size: 12px; color: var(--green); display: flex; align-items: center; gap: 5px; }
+  .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
+  .chat-messages { padding: 20px; min-height: 360px; display: flex; flex-direction: column; gap: 16px; }
+  .msg { max-width: 80%; }
+  .msg-bot { align-self: flex-start; }
+  .msg-user { align-self: flex-end; }
+  .msg-bubble {
+    padding: 12px 16px; border-radius: 12px;
+    font-size: 14px; line-height: 1.5;
+  }
+  .msg-bot .msg-bubble {
+    background: var(--glass2); border: 1px solid var(--border);
+    border-radius: 4px 12px 12px 12px; color: var(--text);
+  }
+  .msg-user .msg-bubble {
+    background: linear-gradient(135deg, rgba(79,195,247,0.25), rgba(21,101,192,0.3));
+    border: 1px solid rgba(79,195,247,0.2);
+    border-radius: 12px 4px 12px 12px; color: var(--text);
+  }
+  .msg-time { font-size: 11px; color: var(--text3); margin-top: 4px; }
+  .msg-user .msg-time { text-align: right; }
+  .chat-input-area {
+    border-top: 1px solid var(--border);
+    padding: 16px 20px;
+    display: flex; gap: 10px;
+  }
+  .chat-input {
+    flex: 1;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    color: var(--text); padding: 10px 16px;
+    border-radius: 8px; font-family: var(--font-body); font-size: 14px;
+    outline: none;
+  }
+  .chat-send {
+    background: linear-gradient(135deg, var(--accent), #1565c0);
+    border: none; color: #fff;
+    padding: 10px 18px; border-radius: 8px;
+    cursor: pointer; font-size: 14px; transition: opacity 0.2s;
+  }
+  .chat-send:hover { opacity: 0.85; }
+  .chat-features { }
+  .chat-feature-list { margin-top: 32px; display: flex; flex-direction: column; gap: 20px; }
+  .feature-item {
+    display: flex; align-items: flex-start; gap: 16px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    transition: border-color 0.2s;
+  }
+  .feature-item:hover { border-color: rgba(79,195,247,0.25); }
+  .feature-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+  .feature-item h4 { font-size: 16px; font-weight: 500; margin-bottom: 4px; }
+  .feature-item p { font-size: 14px; color: var(--text2); line-height: 1.5; }
+  /* SCHEDULING */
+  #scheduling { background: var(--sky); }
+  .schedule-grid {
+    display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px;
+    max-width: 1200px; margin: 60px auto 0;
+  }
+  .calendar-mock {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+  }
+  .cal-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 24px;
+  }
+  .cal-month { font-family: var(--font-display); font-size: 22px; font-weight: 400; }
+  .cal-nav { display: flex; gap: 8px; }
+  .cal-nav button {
+    background: var(--glass2); border: 1px solid var(--border);
+    color: var(--text); padding: 6px 12px; border-radius: 6px;
+    cursor: pointer; font-size: 14px;
+  }
+  .cal-days {
+    display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px;
+    text-align: center;
+  }
+  .cal-day-label { font-size: 11px; color: var(--text3); padding: 8px 0; text-transform: uppercase; letter-spacing: 0.05em; }
+  .cal-day {
+    padding: 10px 4px; border-radius: 8px; font-size: 14px;
+    cursor: pointer; transition: background 0.15s;
+    color: var(--text2);
+  }
+  .cal-day:hover { background: var(--glass2); color: var(--text); }
+  .cal-day.available { color: var(--text); }
+  .cal-day.booked { color: var(--text3); text-decoration: line-through; cursor: not-allowed; }
+  .cal-day.selected { background: linear-gradient(135deg, var(--accent), #1565c0); color: #fff; }
+  .cal-day.today { border: 1px solid var(--accent); color: var(--accent); }
+  .time-slots { margin-top: 24px; }
+  .time-slots h4 { font-size: 14px; color: var(--text2); margin-bottom: 12px; }
+  .slots { display: flex; gap: 8px; flex-wrap: wrap; }
+  .slot {
+    padding: 8px 16px; border-radius: 6px;
+    border: 1px solid var(--border); color: var(--text);
+    font-size: 13px; cursor: pointer; transition: all 0.15s;
+    background: var(--glass);
+  }
+  .slot:hover { border-color: var(--accent); color: var(--accent); }
+  .slot.taken { opacity: 0.3; cursor: not-allowed; text-decoration: line-through; }
+  .slot.chosen { background: rgba(79,195,247,0.15); border-color: var(--accent); color: var(--accent); }
+  .schedule-info { display: flex; flex-direction: column; gap: 20px; }
+  .info-card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 24px;
+  }
+  .info-card h4 { font-size: 16px; font-weight: 500; margin-bottom: 8px; }
+  .info-card p { font-size: 14px; color: var(--text2); line-height: 1.6; }
+  .progress-ring {
+    display: flex; align-items: center; gap: 16px; margin-top: 16px;
+  }
+  .ring { position: relative; width: 64px; height: 64px; }
+  .ring svg { transform: rotate(-90deg); }
+  .ring-num {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 500; color: var(--accent);
+  }
+  .ring-text { font-size: 13px; color: var(--text2); }
+  /* COVERAGE */
+  #coverage { background: var(--sky2); }
+  .coverage-content {
+    max-width: 1200px; margin: 60px auto 0;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+  }
+  .coverage-map {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 40px;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .map-placeholder {
+    font-size: 100px; opacity: 0.15;
+    margin-bottom: 20px;
+  }
+  .coverage-cities {
+    display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+    margin-top: 20px;
+  }
+  .city-tag {
+    background: var(--glass2); border: 1px solid var(--border);
+    padding: 6px 14px; border-radius: 40px;
+    font-size: 13px; color: var(--text2);
+    transition: all 0.2s;
+  }
+  .city-tag:hover { border-color: var(--accent); color: var(--accent); }
+  .coverage-text {}
+  .coverage-list { margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+  .coverage-item {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--glass); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 16px 20px;
+  }
+  .coverage-flag { font-size: 28px; }
+  .coverage-item h4 { font-size: 15px; font-weight: 500; }
+  .coverage-item p { font-size: 13px; color: var(--text2); }
+  /* DASHBOARD PREVIEW */
+  #dashboard { background: var(--sky); }
+  .dashboard-preview {
+    max-width: 1200px; margin: 60px auto 0;
+    background: var(--sky3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .dash-header {
+    background: var(--glass);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 28px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .dash-title { font-weight: 500; font-size: 16px; }
+  .dash-date { font-size: 13px; color: var(--text2); font-family: var(--font-mono); }
+  .dash-body { padding: 28px; }
+  .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 28px; }
+  .kpi-card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+  }
+  .kpi-label { font-size: 12px; color: var(--text3); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 8px; }
+  .kpi-value { font-family: var(--font-display); font-size: 32px; font-weight: 300; }
+  .kpi-delta { font-size: 12px; margin-top: 4px; }
+  .delta-up { color: var(--green); }
+  .delta-down { color: #ef5350; }
+  .dash-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 20px; }
+  .dash-panel {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+  }
+  .dash-panel h4 { font-size: 14px; color: var(--text2); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--font-mono); }
+  .bar-chart { display: flex; align-items: flex-end; gap: 8px; height: 100px; }
+  .bar {
+    flex: 1;
+    border-radius: 4px 4px 0 0;
+    background: linear-gradient(to top, rgba(79,195,247,0.3), rgba(79,195,247,0.7));
+    min-width: 0;
+  }
+  .recent-list { display: flex; flex-direction: column; gap: 12px; }
+  .recent-item {
+    display: flex; align-items: center; gap: 12px;
+    padding-bottom: 12px; border-bottom: 1px solid var(--border);
+  }
+  .recent-item:last-child { border: none; padding: 0; }
+  .recent-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .dot-blue { background: var(--accent); }
+  .dot-gold { background: var(--gold); }
+  .dot-green { background: var(--green); }
+  .recent-info { flex: 1; }
+  .recent-name { font-size: 14px; font-weight: 500; }
+  .recent-detail { font-size: 12px; color: var(--text2); }
+  .recent-amount { font-size: 14px; color: var(--accent); font-family: var(--font-mono); }
+  /* TRUST */
+  #trust { background: var(--sky2); }
+  .trust-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    max-width: 1200px; margin: 60px auto 0;
+  }
+  .trust-card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    transition: transform 0.3s;
+  }
+  .trust-card:hover { transform: translateY(-4px); }
+  .stars { color: var(--gold); font-size: 18px; margin-bottom: 16px; }
+  .review-text { font-size: 16px; color: var(--text2); line-height: 1.7; font-style: italic; font-family: var(--font-display); font-weight: 300; }
+  .reviewer { margin-top: 20px; display: flex; align-items: center; gap: 12px; }
+  .reviewer-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 500;
+    background: linear-gradient(135deg, var(--accent), #1565c0);
+    color: #fff;
+  }
+  .reviewer-name { font-size: 14px; font-weight: 500; }
+  .reviewer-role { font-size: 12px; color: var(--text3); }
+  /* SEO SECTION */
+  #seo { background: var(--sky); }
+  .seo-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+    max-width: 1200px; margin: 60px auto 0;
+  }
+  .seo-card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+  }
+  .seo-rank {
+    font-family: var(--font-display);
+    font-size: 48px; font-weight: 300; color: var(--accent);
+  }
+  .seo-kw { font-size: 16px; color: var(--text); margin: 8px 0 4px; }
+  .seo-city { font-size: 13px; color: var(--text2); }
+  .seo-bar-track { height: 4px; background: var(--glass2); border-radius: 2px; margin-top: 16px; }
+  .seo-bar-fill { height: 100%; border-radius: 2px; background: linear-gradient(90deg, var(--accent), var(--gold)); }
+  /* PRICING */
+  #pricing { background: var(--sky2); }
+  .pricing-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    max-width: 1200px; margin: 60px auto 0;
+  }
+  .price-card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px 32px;
+    position: relative;
+  }
+  .price-card.featured {
+    border-color: rgba(79,195,247,0.4);
+    background: rgba(79,195,247,0.04);
+  }
+  .price-card.featured::before {
+    content: 'Most Popular';
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--accent), #1565c0);
+    color: #fff; font-size: 11px; font-weight: 500;
+    padding: 4px 16px; border-radius: 40px;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    font-family: var(--font-mono);
+  }
+  .price-tier { font-size: 13px; color: var(--accent); font-family: var(--font-mono); letter-spacing: 0.08em; margin-bottom: 8px; text-transform: uppercase; }
+  .price-name { font-family: var(--font-display); font-size: 26px; font-weight: 400; margin-bottom: 4px; }
+  .price-desc { font-size: 14px; color: var(--text2); margin-bottom: 24px; }
+  .price-amount { font-family: var(--font-display); font-size: 48px; font-weight: 300; line-height: 1; }
+  .price-amount span { font-size: 18px; color: var(--text2); }
+  .price-period { font-size: 13px; color: var(--text3); margin-bottom: 28px; }
+  .price-features { list-style: none; margin-bottom: 28px; }
+  .price-features li {
+    font-size: 14px; color: var(--text2);
+    padding: 8px 0; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .price-features li::before { content: '✓'; color: var(--green); font-weight: 600; }
+  /* CTA */
+  #cta {
+    background: linear-gradient(135deg, rgba(79,195,247,0.08), rgba(21,101,192,0.06));
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    text-align: center; padding: 120px 5%;
+  }
+  #cta .section-title { font-size: clamp(40px, 6vw, 80px); }
+  .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 44px; }
+  /* FOOTER */
+  footer {
+    background: var(--sky2);
+    border-top: 1px solid var(--border);
+    padding: 60px 5% 40px;
+  }
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 32px;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .footer-brand p { font-size: 14px; color: var(--text2); margin-top: 16px; max-width: 300px; line-height: 1.7; }
+  .footer-col h5 { font-size: 13px; color: var(--text); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col a { color: var(--text2); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--text); }
+  .footer-bottom {
+    max-width: 1200px; margin: 40px auto 0;
+    padding-top: 24px; border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 13px; color: var(--text3);
+  }
+  /* CHATBOT WIDGET */
+  .chat-widget {
+    position: fixed; bottom: 28px; right: 28px; z-index: 999;
+    display: flex; flex-direction: column; align-items: flex-end; gap: 16px;
+  }
+  .chat-window-float {
+    background: var(--sky3);
+    border: 1px solid var(--border2);
+    border-radius: var(--radius);
+    width: 360px;
+    box-shadow: var(--shadow), var(--glow);
+    overflow: hidden;
+    display: none;
+  }
+  .chat-window-float.open { display: block; animation: slideUp 0.3s ease; }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .chat-float-header {
+    background: linear-gradient(135deg, rgba(79,195,247,0.2), rgba(21,101,192,0.2));
+    border-bottom: 1px solid var(--border);
+    padding: 16px 18px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .chat-float-title { display: flex; align-items: center; gap: 10px; font-weight: 500; font-size: 15px; }
+  .chat-close { background: none; border: none; color: var(--text2); cursor: pointer; font-size: 20px; }
+  .chat-float-messages { padding: 16px; min-height: 280px; max-height: 350px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
+  .chat-float-input {
+    border-top: 1px solid var(--border);
+    padding: 12px 16px;
+    display: flex; gap: 8px;
+  }
+  .chat-float-input input {
+    flex: 1; background: var(--glass);
+    border: 1px solid var(--border); color: var(--text);
+    padding: 8px 14px; border-radius: 6px; font-family: var(--font-body);
+    font-size: 14px; outline: none;
+  }
+  .chat-float-input button {
+    background: linear-gradient(135deg, var(--accent), #1565c0);
+    border: none; color: #fff;
+    padding: 8px 14px; border-radius: 6px; cursor: pointer; font-size: 14px;
+  }
+  .chat-toggle {
+    width: 58px; height: 58px;
+    background: linear-gradient(135deg, var(--accent), #1565c0);
+    border: none; border-radius: 50%; cursor: pointer;
+    font-size: 24px; color: #fff;
+    box-shadow: 0 8px 32px rgba(79,195,247,0.4);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.2s;
+  }
+  .chat-toggle:hover { transform: scale(1.05); }
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .quote-wrap, .chat-wrap, .schedule-grid, .coverage-content,
+    .dash-grid, .services-grid, .trust-grid, .pricing-grid,
+    .footer-grid { grid-template-columns: 1fr; }
+    .kpi-row { grid-template-columns: repeat(2, 1fr); }
+    .seo-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .chat-window-float { width: calc(100vw - 40px); }
+  }
+  /* ANIMATIONS */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  /* TYPING */
+  .typing-indicator { display: flex; gap: 4px; align-items: center; padding: 4px 0; }
+  .typing-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: typing 1.2s ease-in-out infinite; }
+  .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+  .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes typing { 0%, 60%, 100% { opacity: 0.2; } 30% { opacity: 1; } }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="logo-icon">🪟</div>
+    <span class="logo-text">Ms <span>Window</span> Washing LLC</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#quote">Get a Quote</a></li>
+    <li><a href="#coverage">Coverage</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#ai-chat">AI Assistant</a></li>
+    <li><a href="#quote" class="nav-cta">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-badge"><div class="pulse-dot"></div> Expert Crews · AI-Powered Ops · Est. July 2024 · DMV Region</div>
+  <h1>Clarity<br>Through <em>Intelligence.</em></h1>
+  <p class="hero-sub">The DMV's most trusted window washing and commercial cleaning company. Skilled human crews, AI-powered booking and scheduling, and spotless results — delivered with professionalism and care.</p>
+  <div class="hero-actions">
+    <a href="#quote" class="btn-primary">Get AI Quote Instantly</a>
+    <a href="#ai-chat" class="btn-ghost">Meet Our AI Assistant</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-item"><div class="stat-num">98%</div><div class="stat-label">Satisfaction Rate</div></div>
+    <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">States Covered</div></div>
+    <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">AI Support</div></div>
+    <div class="stat-item"><div class="stat-num">&lt;2min</div><div class="stat-label">Quote Time</div></div>
+  </div>
+</section>
+
+<!-- AI QUOTE ENGINE -->
+<section id="quote">
+  <div class="section-label">⚡ AI Quote Engine</div>
+  <h2 class="section-title">Your Price,<br><em>Instantly Generated</em></h2>
+  <p class="section-sub">Our AI analyzes your property type, square footage, and service needs to deliver an accurate, competitive quote in seconds.</p>
+  <div class="quote-wrap">
+    <div class="quote-panel">
+      <h3>Tell Us About Your Space</h3>
+      <p>Fill in a few details and let the AI do the rest.</p>
+      <div class="form-group">
+        <label>Service Type</label>
+        <select id="service-type" onchange="updateQuote()">
+          <option value="">Select a service...</option>
+          <option value="residential-window">Residential Window Washing</option>
+          <option value="commercial-window">Commercial Window Washing</option>
+          <option value="janitorial">Commercial Janitorial Services</option>
+          <option value="deep-clean">Deep Cleaning Service</option>
+          <option value="government">Government/Federal Facilities</option>
+          <option value="post-construction">Post-Construction Cleaning</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Property Size (sq ft)</label>
+          <input type="number" id="sqft" placeholder="e.g. 3000" onchange="updateQuote()" oninput="updateQuote()">
+        </div>
+        <div class="form-group">
+          <label>Number of Floors</label>
+          <input type="number" id="floors" placeholder="e.g. 2" min="1" max="50" onchange="updateQuote()" oninput="updateQuote()">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Frequency</label>
+        <select id="frequency" onchange="updateQuote()">
+          <option value="">Select frequency...</option>
+          <option value="one-time">One-Time Service</option>
+          <option value="weekly">Weekly (save 15%)</option>
+          <option value="biweekly">Bi-Weekly (save 10%)</option>
+          <option value="monthly">Monthly (save 5%)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Location</label>
+        <select id="location" onchange="updateQuote()">
+          <option value="">Select region...</option>
+          <option value="dc">Washington, DC</option>
+          <option value="md-suburban">Maryland – Suburban</option>
+          <option value="md-pgc">Prince George's County, MD</option>
+          <option value="md-moco">Montgomery County, MD</option>
+          <option value="va-nova">Northern Virginia (NoVA)</option>
+          <option value="va-arlington">Arlington, VA</option>
+          <option value="va-fairfax">Fairfax County, VA</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Additional Notes (optional)</label>
+        <textarea rows="3" placeholder="High-rise exterior, special access equipment, post-event cleaning, etc."></textarea>
+      </div>
+      <button class="btn-primary" style="width:100%;" onclick="generateQuote()">Generate AI Quote →</button>
+    </div>
+    <div class="quote-result" id="quote-result">
+      <div class="quote-ai-badge">🤖 AI Generated Estimate</div>
+      <div style="color:var(--text2); font-size:15px; margin-bottom:12px;" id="quote-service-label">Awaiting your inputs…</div>
+      <div class="quote-price" id="quote-price"><sub>$</sub><span id="price-val">—</span></div>
+      <div style="font-size:13px; color:var(--text3);" id="quote-period"></div>
+      <div class="quote-breakdown" id="quote-breakdown" style="display:none;">
+        <div class="quote-line"><span>Base Service Rate</span><span id="qb-base">—</span></div>
+        <div class="quote-line"><span>Size Adjustment</span><span id="qb-size">—</span></div>
+        <div class="quote-line"><span>Floor Premium</span><span id="qb-floor">—</span></div>
+        <div class="quote-line"><span>Frequency Discount</span><span id="qb-discount" style="color:var(--green);">—</span></div>
+        <div class="quote-line total"><span><strong>Estimated Total</strong></span><span id="qb-total" style="color:var(--accent);">—</span></div>
+      </div>
+      <div id="quote-placeholder" style="margin-top:40px; text-align:center; opacity:0.4;">
+        <div style="font-size:48px; margin-bottom:16px;">✨</div>
+        <p style="font-size:15px; color:var(--text2);">Complete the form to see your AI-generated quote with full cost breakdown</p>
+      </div>
+      <div class="quote-actions" id="quote-actions" style="display:none;">
+        <button class="btn-book" onclick="alert('Redirecting to secure booking portal...')">Book This Service</button>
+        <button class="btn-save" onclick="alert('Quote saved! Check your email.')">Save Quote</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-label">🧹 Our Services</div>
+  <h2 class="section-title">Built for Every<br><em>Scale & Sector</em></h2>
+  <p class="section-sub">From single-family homes to federal government facilities — we bring enterprise-grade cleaning to every environment.</p>
+  <div class="services-grid reveal">
+    <div class="service-card">
+      <div class="service-icon icon-blue">🪟</div>
+      <h3>Window Washing</h3>
+      <p>Interior and exterior window cleaning using purified water systems and professional-grade tools for streak-free, crystal clarity.</p>
+      <ul class="service-features">
+        <li>Residential & commercial</li>
+        <li>High-rise rope access</li>
+        <li>Tracks, sills & frames</li>
+        <li>Post-construction removal</li>
+      </ul>
+      <span class="service-tag">→ Core Service</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon icon-gold">🏢</div>
+      <h3>Commercial Janitorial</h3>
+      <p>Full-scope janitorial services for offices, retail, healthcare facilities, and corporate campuses across the DMV region.</p>
+      <ul class="service-features">
+        <li>Daily & recurring contracts</li>
+        <li>OSHA-compliant protocols</li>
+        <li>Eco-certified products</li>
+        <li>Dedicated account manager</li>
+      </ul>
+      <span class="service-tag">→ Coming 2025</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon icon-green">🏛️</div>
+      <h3>Government & Federal</h3>
+      <p>Security-cleared cleaning teams for federal agencies, embassies, and government facilities with strict compliance standards.</p>
+      <ul class="service-features">
+        <li>Background-checked staff</li>
+        <li>GSA contract ready</li>
+        <li>Secure facility access</li>
+        <li>Bonded & fully insured</li>
+      </ul>
+      <span class="service-tag">→ Enterprise Tier</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon icon-blue">✨</div>
+      <h3>Deep Cleaning</h3>
+      <p>Comprehensive top-to-bottom deep cleaning for move-ins, move-outs, post-events, and seasonal property refresh services.</p>
+      <ul class="service-features">
+        <li>Full property sanitation</li>
+        <li>Appliance deep cleaning</li>
+        <li>Grout & tile restoration</li>
+        <li>Same-day availability</li>
+      </ul>
+      <span class="service-tag">→ Residential & Commercial</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon icon-gold">🔨</div>
+      <h3>Post-Construction</h3>
+      <p>Specialized debris removal, surface cleaning, and final touch-up services to prepare new builds and renovations for occupancy.</p>
+      <ul class="service-features">
+        <li>Paint & adhesive removal</li>
+        <li>Fine dust elimination</li>
+        <li>Floor protection & polish</li>
+        <li>Certificate of cleanliness</li>
+      </ul>
+      <span class="service-tag">→ Contractor Partner</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon icon-green">🌿</div>
+      <h3>Green Cleaning</h3>
+      <p>Environmentally responsible cleaning solutions using EPA-certified, non-toxic products — safe for people, pets, and the planet.</p>
+      <ul class="service-features">
+        <li>LEED-point eligible</li>
+        <li>Zero VOC products</li>
+        <li>Microfiber systems</li>
+        <li>Reduced water usage</li>
+      </ul>
+      <span class="service-tag">→ Eco Premium</span>
+    </div>
+  </div>
+</section>
+
+<!-- AI CHATBOT -->
+<section id="ai-chat">
+  <div class="section-label">🤖 AI Assistant</div>
+  <h2 class="section-title">24/7 Support<br><em>Powered by AI</em></h2>
+  <p class="section-sub">Our intelligent assistant handles inquiries, quotes, scheduling, and follow-ups around the clock — no hold times, no wait.</p>
+  <div class="chat-wrap">
+    <div class="chat-window reveal">
+      <div class="chat-header">
+        <div class="chat-avatar">✨</div>
+        <div>
+          <div class="chat-title">Clara — MWW Assistant</div>
+          <div class="chat-status"><div class="status-dot"></div> Online now</div>
+        </div>
+      </div>
+      <div class="chat-messages" id="demo-chat">
+        <div class="msg msg-bot">
+          <div class="msg-bubble">Hello! I'm Clara, your AI concierge for Ms Window Washing LLC. I can provide instant quotes, check availability, and help schedule your service. How can I help you today?</div>
+          <div class="msg-time">Just now</div>
+        </div>
+        <div class="msg msg-user">
+          <div class="msg-bubble">I need commercial window cleaning for a 5-story office building in Arlington, VA</div>
+          <div class="msg-time">Just now</div>
+        </div>
+        <div class="msg msg-bot">
+          <div class="msg-bubble">Great choice! For a 5-story commercial building in Arlington, our base pricing starts at <strong style="color:var(--accent);">$680–$1,200</strong> depending on window count and access requirements. Would you like me to generate a detailed quote, or check our next available dates?</div>
+          <div class="msg-time">Just now</div>
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <input class="chat-input" id="demo-input" placeholder="Type your message..." onkeydown="handleDemoChat(event)">
+        <button class="chat-send" onclick="sendDemoMessage()">Send</button>
+      </div>
+    </div>
+    <div class="chat-features">
+      <div class="chat-feature-list reveal">
+        <div class="feature-item">
+          <div class="feature-icon">⚡</div>
+          <div>
+            <h4>Instant AI Quotes</h4>
+            <p>Receive accurate service estimates within 30 seconds based on your property details and service requirements.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📅</div>
+          <div>
+            <h4>Smart Scheduling</h4>
+            <p>Clara checks real-time crew availability and books your appointment without any back-and-forth communication.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🔔</div>
+          <div>
+            <h4>Automated Follow-ups</h4>
+            <p>Receives reminders, satisfaction surveys, and rebooking offers automatically — keeping your relationship active.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🌐</div>
+          <div>
+            <h4>Multilingual Support</h4>
+            <p>Clara communicates in English, Spanish, French, and more — serving the diverse DMV community fluently.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULING -->
+<section id="scheduling">
+  <div class="section-label">📅 Smart Scheduling</div>
+  <h2 class="section-title">Book Your Service<br><em>In Seconds</em></h2>
+  <p class="section-sub">Our AI-powered scheduling engine optimizes crew routing and confirms your appointment instantly — so our professional cleaning teams arrive on time, every time.</p>
+  <div class="schedule-grid reveal">
+    <div class="calendar-mock">
+      <div class="cal-header">
+        <span class="cal-month">June 2025</span>
+        <div class="cal-nav">
+          <button>‹</button>
+          <button>›</button>
+        </div>
+      </div>
+      <div class="cal-days">
+        <div class="cal-day-label">Su</div><div class="cal-day-label">Mo</div><div class="cal-day-label">Tu</div>
+        <div class="cal-day-label">We</div><div class="cal-day-label">Th</div><div class="cal-day-label">Fr</div>
+        <div class="cal-day-label">Sa</div>
+        <div class="cal-day"></div><div class="cal-day"></div><div class="cal-day"></div>
+        <div class="cal-day"></div><div class="cal-day"></div><div class="cal-day"></div>
+        <div class="cal-day">1</div>
+        <div class="cal-day available">2</div><div class="cal-day booked">3</div>
+        <div class="cal-day available">4</div><div class="cal-day available">5</div>
+        <div class="cal-day available">6</div><div class="cal-day available">7</div>
+        <div class="cal-day available">8</div>
+        <div class="cal-day booked">9</div><div class="cal-day available">10</div>
+        <div class="cal-day available">11</div><div class="cal-day available">12</div>
+        <div class="cal-day available">13</div><div class="cal-day booked">14</div>
+        <div class="cal-day available">15</div>
+        <div class="cal-day available">16</div><div class="cal-day available">17</div>
+        <div class="cal-day available">18</div><div class="cal-day selected" onclick="">19</div>
+        <div class="cal-day available">20</div><div class="cal-day available">21</div>
+        <div class="cal-day available">22</div>
+        <div class="cal-day today">23</div><div class="cal-day available">24</div>
+        <div class="cal-day available">25</div><div class="cal-day available">26</div>
+        <div class="cal-day available">27</div><div class="cal-day booked">28</div>
+        <div class="cal-day available">29</div>
+        <div class="cal-day available">30</div>
+      </div>
+      <div class="time-slots">
+        <h4>Available Times — June 19</h4>
+        <div class="slots">
+          <div class="slot taken">7:00 AM</div>
+          <div class="slot">8:00 AM</div>
+          <div class="slot chosen">9:00 AM ✓</div>
+          <div class="slot">11:00 AM</div>
+          <div class="slot">1:00 PM</div>
+          <div class="slot taken">3:00 PM</div>
+          <div class="slot">4:00 PM</div>
+        </div>
+      </div>
+    </div>
+    <div class="schedule-info">
+      <div class="info-card">
+        <h4>🎯 AI Route Optimization</h4>
+        <p>Our system clusters appointments by geography, reducing drive time and allowing us to offer earlier slots at competitive rates.</p>
+        <div class="progress-ring">
+          <div class="ring">
+            <svg width="64" height="64" viewBox="0 0 64 64">
+              <circle cx="32" cy="32" r="28" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="4"/>
+              <circle cx="32" cy="32" r="28" fill="none" stroke="#4fc3f7" stroke-width="4" stroke-dasharray="176" stroke-dashoffset="35" stroke-linecap="round"/>
+            </svg>
+            <div class="ring-num">80%</div>
+          </div>
+          <p class="ring-text">Route efficiency improvement with AI scheduling</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <h4>📨 Instant Confirmation</h4>
+        <p>Upon booking, you receive an immediate SMS + email confirmation with your crew details, arrival window, and service checklist.</p>
+      </div>
+      <div class="info-card">
+        <h4>🔄 Flexible Rescheduling</h4>
+        <p>Plans change. Reschedule or cancel up to 24 hours before your appointment with no fees — directly from your customer portal.</p>
+      </div>
+      <div class="info-card">
+        <h4>⭐ Post-Service Review</h4>
+        <p>After every service, our AI automatically requests feedback and escalates any concerns to management within 15 minutes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section id="coverage">
+  <div class="section-label">📍 Service Coverage</div>
+  <h2 class="section-title">Dominating<br>the <em>DMV Region</em></h2>
+  <p class="section-sub">Strategically positioned to serve Washington DC, Maryland, and Virginia with rapid dispatch times across the tri-state area.</p>
+  <div class="coverage-content reveal">
+    <div class="coverage-map">
+      <div class="map-placeholder">🗺️</div>
+      <h3 style="font-family:var(--font-display); font-size:24px; font-weight:400;">DMV Service Network</h3>
+      <p style="color:var(--text2); font-size:14px; margin-top:8px;">Active in 40+ cities and counties</p>
+      <div class="coverage-cities">
+        <span class="city-tag">Washington DC</span>
+        <span class="city-tag">Arlington</span>
+        <span class="city-tag">Alexandria</span>
+        <span class="city-tag">Bethesda</span>
+        <span class="city-tag">Silver Spring</span>
+        <span class="city-tag">Rockville</span>
+        <span class="city-tag">Fairfax</span>
+        <span class="city-tag">Tysons</span>
+        <span class="city-tag">Reston</span>
+        <span class="city-tag">Herndon</span>
+        <span class="city-tag">Gaithersburg</span>
+        <span class="city-tag">Bowie</span>
+        <span class="city-tag">College Park</span>
+        <span class="city-tag">Annapolis</span>
+      </div>
+    </div>
+    <div class="coverage-text">
+      <div class="coverage-list">
+        <div class="coverage-item">
+          <div class="coverage-flag">🏛️</div>
+          <div>
+            <h4>Washington, DC</h4>
+            <p>All wards covered — residential neighborhoods to K Street corporate corridor. Federal facility specialists available.</p>
+          </div>
+        </div>
+        <div class="coverage-item">
+          <div class="coverage-flag">🦀</div>
+          <div>
+            <h4>Maryland</h4>
+            <p>Prince George's County, Montgomery County, Howard County, Anne Arundel, and surrounding suburban markets.</p>
+          </div>
+        </div>
+        <div class="coverage-item">
+          <div class="coverage-flag">🌟</div>
+          <div>
+            <h4>Northern Virginia</h4>
+            <p>Arlington, Alexandria, Fairfax, Loudoun, Prince William counties — including the technology corridor from Tysons to Reston.</p>
+          </div>
+        </div>
+        <div class="coverage-item">
+          <div class="coverage-flag">🚀</div>
+          <div>
+            <h4>Expanding 2025</h4>
+            <p>Baltimore Metro, Richmond, and broader Chesapeake Bay region as part of our aggressive regional growth plan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD PREVIEW -->
+<section id="dashboard">
+  <div class="section-label">📊 Business Intelligence</div>
+  <h2 class="section-title">Your Operations,<br><em>Fully Visible</em></h2>
+  <p class="section-sub">A real-time command center that tracks revenue, leads, crew performance, and customer satisfaction — from any device.</p>
+  <div class="dashboard-preview reveal">
+    <div class="dash-header">
+      <div class="dash-title">MWW Operations Dashboard</div>
+      <div class="dash-date">LIVE · June 2025</div>
+    </div>
+    <div class="dash-body">
+      <div class="kpi-row">
+        <div class="kpi-card">
+          <div class="kpi-label">Monthly Revenue</div>
+          <div class="kpi-value" style="color:var(--accent);">$24.8K</div>
+          <div class="kpi-delta delta-up">↑ 34% vs last month</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Active Jobs</div>
+          <div class="kpi-value">47</div>
+          <div class="kpi-delta delta-up">↑ 12 new this week</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Lead Conversion</div>
+          <div class="kpi-value" style="color:var(--gold);">68%</div>
+          <div class="kpi-delta delta-up">↑ 8% vs last month</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Avg Rating</div>
+          <div class="kpi-value" style="color:var(--green);">4.9★</div>
+          <div class="kpi-delta" style="color:var(--text2);">82 reviews total</div>
+        </div>
+      </div>
+      <div class="dash-grid">
+        <div class="dash-panel">
+          <h4>Revenue (Last 7 Days)</h4>
+          <div class="bar-chart">
+            <div class="bar" style="height:45%;"></div>
+            <div class="bar" style="height:62%;"></div>
+            <div class="bar" style="height:55%;"></div>
+            <div class="bar" style="height:80%;"></div>
+            <div class="bar" style="height:70%;"></div>
+            <div class="bar" style="height:90%;"></div>
+            <div class="bar" style="height:100%;"></div>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-top:8px;">
+            <span style="font-size:11px; color:var(--text3); font-family:var(--font-mono);">Mon</span>
+            <span style="font-size:11px; color:var(--text3); font-family:var(--font-mono);">Tue</span>
+            <span style="font-size:11px; color:var(--text3); font-family:var(--font-mono);">Wed</span>
+            <span style="font-size:11px; color:var(--text3); font-family:var(--font-mono);">Thu</span>
+            <span style="font-size:11px; color:var(--text3); font-family:var(--font-mono);">Fri</span>
+            <span style="font-size:11px; color:var(--text3); font-family:var(--font-mono);">Sat</span>
+            <span style="font-size:11px; color:var(--accent); font-family:var(--font-mono);">Sun</span>
+          </div>
+        </div>
+        <div class="dash-panel">
+          <h4>Recent Bookings</h4>
+          <div class="recent-list">
+            <div class="recent-item">
+              <div class="recent-dot dot-blue"></div>
+              <div class="recent-info">
+                <div class="recent-name">Capitol Hill Office Complex</div>
+                <div class="recent-detail">Commercial Windows · June 23</div>
+              </div>
+              <div class="recent-amount">$840</div>
+            </div>
+            <div class="recent-item">
+              <div class="recent-dot dot-gold"></div>
+              <div class="recent-info">
+                <div class="recent-name">Bethesda Residential</div>
+                <div class="recent-detail">Deep Clean + Windows · June 22</div>
+              </div>
+              <div class="recent-amount">$320</div>
+            </div>
+            <div class="recent-item">
+              <div class="recent-dot dot-green"></div>
+              <div class="recent-info">
+                <div class="recent-name">Tysons Corporate Park</div>
+                <div class="recent-detail">Monthly Janitorial Contract</div>
+              </div>
+              <div class="recent-amount">$2,400</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO -->
+<section id="seo" style="background:var(--sky);">
+  <div class="section-label">🎯 SEO Dominance</div>
+  <h2 class="section-title">Ranking at the Top<br><em>Across the DMV</em></h2>
+  <p class="section-sub">AI-optimized content strategy targeting high-intent commercial cleaning searches across every major DMV city and county.</p>
+  <div class="seo-grid reveal">
+    <div class="seo-card">
+      <div class="seo-rank">#1</div>
+      <div class="seo-kw">Window washing Washington DC</div>
+      <div class="seo-city">Monthly volume: 2,400 searches</div>
+      <div class="seo-bar-track"><div class="seo-bar-fill" style="width:95%;"></div></div>
+    </div>
+    <div class="seo-card">
+      <div class="seo-rank">#2</div>
+      <div class="seo-kw">Commercial cleaning Arlington VA</div>
+      <div class="seo-city">Monthly volume: 1,800 searches</div>
+      <div class="seo-bar-track"><div class="seo-bar-fill" style="width:88%;"></div></div>
+    </div>
+    <div class="seo-card">
+      <div class="seo-rank">#1</div>
+      <div class="seo-kw">Office cleaning Bethesda MD</div>
+      <div class="seo-city">Monthly volume: 1,200 searches</div>
+      <div class="seo-bar-track"><div class="seo-bar-fill" style="width:92%;"></div></div>
+    </div>
+    <div class="seo-card">
+      <div class="seo-rank">#3</div>
+      <div class="seo-kw">Janitorial services Northern Virginia</div>
+      <div class="seo-city">Monthly volume: 3,100 searches</div>
+      <div class="seo-bar-track"><div class="seo-bar-fill" style="width:78%;"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST / REVIEWS -->
+<section id="trust" style="background:var(--sky2);">
+  <div class="section-label">⭐ Client Reviews</div>
+  <h2 class="section-title">What Our Clients<br><em>Say About Us</em></h2>
+  <div class="trust-grid reveal">
+    <div class="trust-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-text">"Absolutely professional and thorough. Our downtown DC office building has never looked this pristine. The AI booking system made scheduling a breeze — confirmed within minutes."</div>
+      <div class="reviewer">
+        <div class="reviewer-avatar">JM</div>
+        <div>
+          <div class="reviewer-name">James M.</div>
+          <div class="reviewer-role">Property Manager, K Street DC</div>
+        </div>
+      </div>
+    </div>
+    <div class="trust-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-text">"We use Ms Window Washing LLC for our entire Tysons portfolio — 6 buildings. Their AI scheduling keeps everything coordinated without a single email from us. Remarkable service."</div>
+      <div class="reviewer">
+        <div class="reviewer-avatar">SR</div>
+        <div>
+          <div class="reviewer-name">Sandra R.</div>
+          <div class="reviewer-role">Facilities Director, NoVA Corporate</div>
+        </div>
+      </div>
+    </div>
+    <div class="trust-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-text">"From the instant AI quote to the spotless results, this company operates at a different level. They're transforming what a cleaning company can be. Highly recommend."</div>
+      <div class="reviewer">
+        <div class="reviewer-avatar">DT</div>
+        <div>
+          <div class="reviewer-name">David T.</div>
+          <div class="reviewer-role">CEO, Bethesda Tech Startup</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-label">💎 Transparent Pricing</div>
+  <h2 class="section-title">Plans for Every<br><em>Business Size</em></h2>
+  <p class="section-sub">No hidden fees. No surprises. Clear, competitive pricing with enterprise options for large-scale contracts.</p>
+  <div class="pricing-grid reveal">
+    <div class="price-card">
+      <div class="price-tier">Essential</div>
+      <div class="price-name">Home & Small Business</div>
+      <div class="price-desc">Perfect for residential and small commercial properties.</div>
+      <div class="price-amount"><span>from </span>$120<span> /visit</span></div>
+      <div class="price-period">One-time or recurring — no contracts</div>
+      <ul class="price-features">
+        <li>Window washing (interior + exterior)</li>
+        <li>Up to 2,500 sq ft</li>
+        <li>AI quote in 60 seconds</li>
+        <li>Online scheduling & payment</li>
+        <li>5% monthly recurring discount</li>
+      </ul>
+      <a href="#quote" class="btn-ghost" style="display:block; text-align:center; padding:14px;">Get a Quote</a>
+    </div>
+    <div class="price-card featured">
+      <div class="price-tier">Professional</div>
+      <div class="price-name">Commercial & Mid-Size</div>
+      <div class="price-desc">Ideal for offices, retail, and commercial properties.</div>
+      <div class="price-amount"><span>from </span>$480<span> /month</span></div>
+      <div class="price-period">Monthly contract · 10% discount on annual</div>
+      <ul class="price-features">
+        <li>All Essential features</li>
+        <li>Bi-weekly or monthly schedule</li>
+        <li>Dedicated account manager</li>
+        <li>Priority booking & dispatch</li>
+        <li>Automated invoicing & reporting</li>
+        <li>CRM portal access</li>
+      </ul>
+      <a href="#quote" class="btn-primary" style="display:block; text-align:center; padding:14px; text-decoration:none;">Start Today</a>
+    </div>
+    <div class="price-card">
+      <div class="price-tier">Enterprise</div>
+      <div class="price-name">Government & Large-Scale</div>
+      <div class="price-desc">Custom contracts for multi-site and federal facilities.</div>
+      <div class="price-amount">Custom</div>
+      <div class="price-period">Annual contracts · GSA schedule available</div>
+      <ul class="price-features">
+        <li>All Professional features</li>
+        <li>Multi-building management</li>
+        <li>Background-cleared crews</li>
+        <li>SLA guarantees</li>
+        <li>Custom reporting & analytics</li>
+        <li>24/7 emergency response</li>
+      </ul>
+      <a href="mailto:tegmeb29@gmail.com" class="btn-ghost" style="display:block; text-align:center; padding:14px; text-decoration:none;">Contact Sales</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="section-label">🚀 Get Started</div>
+  <h2 class="section-title">The Clearest View<br>in the <em>DMV Starts Here.</em></h2>
+  <p class="section-sub" style="margin:20px auto 0; text-align:center;">Join hundreds of properties already served by the region's most intelligent cleaning company. Book in under 2 minutes.</p>
+  <div class="cta-actions">
+    <a href="#quote" class="btn-primary" style="font-size:17px; padding:18px 44px;">Get Your AI Quote</a>
+    <a href="tel:+12409700838" class="btn-ghost" style="font-size:17px; padding:18px 44px;">📞 Call Us Now</a>
+  </div>
+  <div style="margin-top:44px; display:flex; gap:32px; justify-content:center; flex-wrap:wrap;">
+    <span style="font-size:14px; color:var(--text2);">✓ No contracts required</span>
+    <span style="font-size:14px; color:var(--text2);">✓ Instant confirmation</span>
+    <span style="font-size:14px; color:var(--text2);">✓ Fully insured & bonded</span>
+    <span style="font-size:14px; color:var(--text2);">✓ Satisfaction guaranteed</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" style="margin-bottom:0;">
+        <div class="logo-icon">🪟</div>
+        <span class="logo-text">Ms <span>Window</span> Washing LLC</span>
+      </a>
+      <p>The DMV region's trusted window washing and janitorial services company. Expert human crews backed by smart AI scheduling, quoting, and operations — delivering clarity and professionalism since July 2024.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="#services">Window Washing</a></li>
+        <li><a href="#services">Commercial Janitorial</a></li>
+        <li><a href="#services">Government Cleaning</a></li>
+        <li><a href="#services">Deep Cleaning</a></li>
+        <li><a href="#services">Post-Construction</a></li>
+        <li><a href="#services">Green Cleaning</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Coverage</h5>
+      <ul>
+        <li><a href="#coverage">Washington DC</a></li>
+        <li><a href="#coverage">Maryland</a></li>
+        <li><a href="#coverage">Northern Virginia</a></li>
+        <li><a href="#coverage">Arlington</a></li>
+        <li><a href="#coverage">Bethesda</a></li>
+        <li><a href="#coverage">Fairfax County</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact Us</h5>
+      <ul>
+        <li><a href="tel:+12409700838">📞 (240) 970-0838</a></li>
+        <li><a href="mailto:tegmeb29@gmail.com">✉️ tegmeb29@gmail.com</a></li>
+        <li style="color:var(--text3); font-size:13px; padding-top:4px;">Mon – Sat: 7am – 7pm</li>
+        <li style="color:var(--text3); font-size:13px;">Sun: By appointment</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Ms Window Washing LLC. All rights reserved. DC, MD & VA Licensed.</span>
+    <span style="font-family:var(--font-mono); font-size:11px; color:var(--text3);">AI-POWERED · DMV REGION · EST. JULY 2024</span>
+  </div>
+</footer>
+
+<!-- FLOATING CHATBOT -->
+<div class="chat-widget">
+  <div class="chat-window-float" id="float-chat">
+    <div class="chat-float-header">
+      <div class="chat-float-title">
+        <div class="chat-avatar" style="width:30px;height:30px;font-size:14px;">✨</div>
+        Clara — AI Assistant
+      </div>
+      <button class="chat-close" onclick="toggleChat()">×</button>
+    </div>
+    <div class="chat-float-messages" id="float-messages">
+      <div class="msg msg-bot">
+        <div class="msg-bubble" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:4px 12px 12px 12px; font-size:14px; padding:10px 14px; color:var(--text);">
+          Hi! I'm Clara 👋 How can I help you today? I can provide quotes, check availability, or answer questions about our services.
+        </div>
+      </div>
+    </div>
+    <div class="chat-float-input">
+      <input type="text" id="float-input" placeholder="Ask me anything..." onkeydown="handleFloatChat(event)">
+      <button onclick="sendFloatMessage()">→</button>
+    </div>
+  </div>
+  <button class="chat-toggle" onclick="toggleChat()" id="chat-btn" title="Chat with Clara">✨</button>
+</div>
+
+<script>
+// QUOTE ENGINE
+const rates = {
+  'residential-window': { base: 120, perSqft: 0.04, name: 'Residential Window Washing' },
+  'commercial-window': { base: 280, perSqft: 0.06, name: 'Commercial Window Washing' },
+  'janitorial': { base: 480, perSqft: 0.09, name: 'Commercial Janitorial Services' },
+  'deep-clean': { base: 200, perSqft: 0.07, name: 'Deep Cleaning Service' },
+  'government': { base: 600, perSqft: 0.1, name: 'Government/Federal Cleaning' },
+  'post-construction': { base: 350, perSqft: 0.08, name: 'Post-Construction Cleaning' }
+};
+const discounts = { 'one-time': 0, 'weekly': 0.15, 'biweekly': 0.10, 'monthly': 0.05 };
+
+function updateQuote() { /* live update handled by generateQuote */ }
+
+function generateQuote() {
+  const type = document.getElementById('service-type').value;
+  const sqft = parseInt(document.getElementById('sqft').value) || 0;
+  const floors = parseInt(document.getElementById('floors').value) || 1;
+  const freq = document.getElementById('frequency').value;
+
+  if (!type || !sqft || !freq) {
+    document.getElementById('quote-service-label').textContent = 'Please fill in all required fields above.';
+    return;
+  }
+
+  const r = rates[type];
+  const base = r.base;
+  const sizeAdj = Math.round(sqft * r.perSqft);
+  const floorPrem = Math.round((floors - 1) * 45);
+  const subtotal = base + sizeAdj + floorPrem;
+  const disc = discounts[freq] || 0;
+  const discAmt = Math.round(subtotal * disc);
+  const total = subtotal - discAmt;
+
+  document.getElementById('quote-service-label').textContent = r.name;
+  document.getElementById('price-val').textContent = total.toLocaleString();
+  document.getElementById('quote-period').textContent = freq === 'one-time' ? 'One-time service estimate' : 'Per ' + freq.replace('ly','') + ' service';
+
+  document.getElementById('qb-base').textContent = '$' + base.toLocaleString();
+  document.getElementById('qb-size').textContent = '+$' + sizeAdj.toLocaleString();
+  document.getElementById('qb-floor').textContent = '+$' + floorPrem.toLocaleString();
+  document.getElementById('qb-discount').textContent = disc > 0 ? '-$' + discAmt.toLocaleString() + ' (' + Math.round(disc*100) + '% off)' : '$0';
+  document.getElementById('qb-total').textContent = '$' + total.toLocaleString();
+
+  document.getElementById('quote-placeholder').style.display = 'none';
+  document.getElementById('quote-breakdown').style.display = 'block';
+  document.getElementById('quote-actions').style.display = 'flex';
+}
+
+// CHAT DEMO
+const botResponses = [
+  "That's a great question! Our AI system can process that request. Let me connect you with a full quote — it takes about 30 seconds.",
+  "Absolutely! We cover that area extensively. Our crews are typically available within 48–72 hours for first-time bookings.",
+  "For that size property, I'd estimate between $280–$450 depending on access requirements and window count. Want me to generate a precise quote?",
+  "Great news — we have openings this week! I can lock in Thursday or Friday morning for you. Which works better?",
+  "Our cleaning products are EPA-certified and non-toxic — completely safe for children and pets. We use a green-first approach on all residential jobs.",
+  "I'll log that note for your account. Our team manager will confirm the details at least 24 hours before your appointment.",
+];
+let botIdx = 0;
+
+function handleDemoChat(e) { if (e.key === 'Enter') sendDemoMessage(); }
+
+function sendDemoMessage() {
+  const input = document.getElementById('demo-input');
+  const val = input.value.trim();
+  if (!val) return;
+  const chat = document.getElementById('demo-chat');
+  const userMsg = document.createElement('div');
+  userMsg.className = 'msg msg-user';
+  userMsg.innerHTML = '<div class="msg-bubble">' + val + '</div><div class="msg-time">Just now</div>';
+  chat.appendChild(userMsg);
+  input.value = '';
+  chat.scrollTop = chat.scrollHeight;
+  const typing = document.createElement('div');
+  typing.className = 'msg msg-bot';
+  typing.innerHTML = '<div class="msg-bubble"><div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div></div>';
+  chat.appendChild(typing);
+  chat.scrollTop = chat.scrollHeight;
+  setTimeout(() => {
+    chat.removeChild(typing);
+    const botMsg = document.createElement('div');
+    botMsg.className = 'msg msg-bot';
+    botMsg.innerHTML = '<div class="msg-bubble">' + botResponses[botIdx % botResponses.length] + '</div><div class="msg-time">Just now</div>';
+    chat.appendChild(botMsg);
+    botIdx++;
+    chat.scrollTop = chat.scrollHeight;
+  }, 1200);
+}
+
+// FLOAT CHAT
+let chatOpen = false;
+function toggleChat() {
+  chatOpen = !chatOpen;
+  document.getElementById('float-chat').classList.toggle('open', chatOpen);
+  document.getElementById('chat-btn').textContent = chatOpen ? '×' : '✨';
+}
+
+const floatResponses = [
+  "I'm Clara, Ms Window Washing LLC's AI assistant! I can give you an instant quote, check crew availability, or answer questions. What do you need?",
+  "For that, I'd recommend our Commercial Window Washing package. Want me to generate a price estimate right now?",
+  "We're available across the entire DMV — DC, Maryland, and Northern Virginia. Which city or county are you in?",
+  "Our pricing starts at $120 for residential and $280 for commercial. I can get you an exact number in about 30 seconds — just tell me your square footage!",
+  "I'll flag this for our team. You'll receive a follow-up call within 2 hours during business hours. Is there anything else I can help with?",
+];
+let floatIdx = 0;
+function handleFloatChat(e) { if (e.key === 'Enter') sendFloatMessage(); }
+
+function sendFloatMessage() {
+  const input = document.getElementById('float-input');
+  const val = input.value.trim();
+  if (!val) return;
+  const msgs = document.getElementById('float-messages');
+  const u = document.createElement('div');
+  u.className = 'msg msg-user';
+  u.innerHTML = '<div class="msg-bubble" style="background:rgba(79,195,247,0.2);border:1px solid rgba(79,195,247,0.2);border-radius:12px 4px 12px 12px;font-size:14px;padding:10px 14px;color:var(--text);">' + val + '</div>';
+  msgs.appendChild(u);
+  input.value = '';
+  msgs.scrollTop = msgs.scrollHeight;
+  const t = document.createElement('div');
+  t.className = 'msg msg-bot';
+  t.innerHTML = '<div class="msg-bubble" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:4px 12px 12px 12px;font-size:14px;padding:10px 14px;color:var(--text);"><div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div></div>';
+  msgs.appendChild(t);
+  msgs.scrollTop = msgs.scrollHeight;
+  setTimeout(() => {
+    msgs.removeChild(t);
+    const b = document.createElement('div');
+    b.className = 'msg msg-bot';
+    b.innerHTML = '<div class="msg-bubble" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:4px 12px 12px 12px;font-size:14px;padding:10px 14px;color:var(--text);">' + floatResponses[floatIdx % floatResponses.length] + '</div>';
+    msgs.appendChild(b);
+    floatIdx++;
+    msgs.scrollTop = msgs.scrollHeight;
+  }, 1100);
+}
+
+// SCROLL REVEAL
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
